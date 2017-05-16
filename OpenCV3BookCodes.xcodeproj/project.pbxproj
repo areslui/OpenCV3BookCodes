@@ -25,6 +25,7 @@
 		5014F1211EC839B500C24D4C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5014F1201EC839B500C24D4C /* Accelerate.framework */; };
 		5014F1231EC839BA00C24D4C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5014F1221EC839BA00C24D4C /* AssetsLibrary.framework */; };
 		5014F1251EC839C600C24D4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5014F1241EC839C600C24D4C /* CoreGraphics.framework */; };
+		5014F1701EC971B600C24D4C /* Chapter3VC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5014F16F1EC971B600C24D4C /* Chapter3VC.mm */; };
 		95BD2C467A909CB3A17D9CA1 /* libPods-OpenCV3BookCodes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A318A19B7BB3D06ACE2C721 /* libPods-OpenCV3BookCodes.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		5014F1201EC839B500C24D4C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		5014F1221EC839BA00C24D4C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		5014F1241EC839C600C24D4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5014F16E1EC971B600C24D4C /* Chapter3VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chapter3VC.h; path = CH3.h/Chapter3VC.h; sourceTree = "<group>"; };
+		5014F16F1EC971B600C24D4C /* Chapter3VC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Chapter3VC.mm; path = CH3.h/Chapter3VC.mm; sourceTree = "<group>"; };
 		5A318A19B7BB3D06ACE2C721 /* libPods-OpenCV3BookCodes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OpenCV3BookCodes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739BD231CB317143663A4C99 /* Pods-OpenCV3BookCodes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV3BookCodes.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenCV3BookCodes/Pods-OpenCV3BookCodes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +135,7 @@
 				5014F1011EC5A40400C24D4C /* Info.plist */,
 				5014F0F01EC5A40400C24D4C /* Supporting Files */,
 				5014F10D1EC8160A00C24D4C /* CH1 */,
+				5014F1711EC971BD00C24D4C /* CH3 */,
 			);
 			path = OpenCV3BookCodes;
 			sourceTree = "<group>";
@@ -152,6 +156,15 @@
 				5014F10B1EC815FB00C24D4C /* Chapter1VC.mm */,
 			);
 			name = CH1;
+			sourceTree = "<group>";
+		};
+		5014F1711EC971BD00C24D4C /* CH3 */ = {
+			isa = PBXGroup;
+			children = (
+				5014F16E1EC971B600C24D4C /* Chapter3VC.h */,
+				5014F16F1EC971B600C24D4C /* Chapter3VC.mm */,
+			);
+			name = CH3;
 			sourceTree = "<group>";
 		};
 		B2BF5F56858F0BB2F39B0A66 /* Pods */ = {
@@ -289,6 +302,7 @@
 				5014F10C1EC815FB00C24D4C /* Chapter1VC.mm in Sources */,
 				5014F0F51EC5A40400C24D4C /* AppDelegate.m in Sources */,
 				5014F0F21EC5A40400C24D4C /* main.m in Sources */,
+				5014F1701EC971B600C24D4C /* Chapter3VC.mm in Sources */,
 				5014F1111EC838B600C24D4C /* OpenCVUtilities.mm in Sources */,
 				5014F1091EC5A48300C24D4C /* MainTableViewController.m in Sources */,
 			);

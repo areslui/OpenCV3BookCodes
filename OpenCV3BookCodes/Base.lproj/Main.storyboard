@@ -35,11 +35,46 @@
                     <navigationItem key="navigationItem" id="l50-fP-zJO"/>
                     <connections>
                         <segue destination="sea-Pn-nUT" kind="show" identifier="chapter1" id="OnE-SU-dFe"/>
+                        <segue destination="rNq-9Q-xBN" kind="show" identifier="chapter3" id="H5B-d2-Oq6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSM-Xj-4bW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="577" y="125"/>
+        </scene>
+        <!--Chapter3VC-->
+        <scene sceneID="QND-5d-eIL">
+            <objects>
+                <viewController id="rNq-9Q-xBN" customClass="Chapter3VC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TaG-32-sRQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="PBY-s6-UJu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8m6-1G-1Ix">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3FK-95-NC8">
+                                <rect key="frame" x="16" y="72" width="343" height="537"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8pe-e1-JGp">
+                                <rect key="frame" x="14" y="617" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="sliderValuechanged:" destination="rNq-9Q-xBN" eventType="valueChanged" id="B8r-F7-zEY"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="3FK-95-NC8" id="2GK-Kg-hCp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxc-j9-R4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1553" y="486"/>
         </scene>
         <!--Chapter1VC-->
         <scene sceneID="r5V-6i-FGg">
@@ -79,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGu-No-e6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="125"/>
+            <point key="canvasLocation" x="1553" y="-352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q2Z-sk-Yso">

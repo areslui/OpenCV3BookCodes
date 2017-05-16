@@ -62,7 +62,7 @@
             [self performSegueWithIdentifier:@"" sender:Chapter1];
             break;
         case Chapter3:
-            [self performSegueWithIdentifier:@"" sender:Chapter1];
+            [self performSegueWithIdentifier:@"chapter3" sender:[NSNumber numberWithInteger:self.chapter]];
             break;
         case Chapter4:
             [self performSegueWithIdentifier:@"" sender:Chapter1];
