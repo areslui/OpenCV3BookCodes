@@ -21,6 +21,8 @@ double g_dBetaValue;
 Mat g_SrcImage1;
 Mat g_SrcImage2;
 Mat g_DstImage;
+Mat croppedImage;
+Mat imgROI;
 
 @interface Chapter3VC ()
 
@@ -42,6 +44,10 @@ Mat g_DstImage;
     g_SrcImage2 = [self.tools cvMatFromUIImage:self.srcImage2];
 //    cvtColor(g_SrcImage1, g_SrcImage1, COLOR_BGR2GRAY);
 //    cvtColor(g_SrcImage2, g_SrcImage2, COLOR_BGR2GRAY);
+    
+    // croppe image
+//    croppedImage = g_SrcImage2(Rect_<float>(0, 0, 290, 290));
+//    imgROI = g_SrcImage1(Rect_<float>(10, 10, g_SrcImage2.cols - 10, g_SrcImage2.rows - 10));
 }
 
 - (IBAction)sliderValuechanged:(UISlider *)sender {
