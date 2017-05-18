@@ -30,6 +30,7 @@ Mat imgROI;
 @property (strong, nonatomic) UIImage *srcImage1;
 @property (strong, nonatomic) UIImage *srcImage2;
 @property (strong, nonatomic) OpenCVUtilities *tools;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
 @end
 
@@ -37,17 +38,28 @@ Mat imgROI;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.srcImage1 = [UIImage imageNamed:@"keyhole"];
-    self.srcImage2 = [UIImage imageNamed:@"wordpress"];
-    self.tools = [[OpenCVUtilities alloc] init];
-    g_SrcImage1 = [self.tools cvMatFromUIImage:self.srcImage1];
-    g_SrcImage2 = [self.tools cvMatFromUIImage:self.srcImage2];
-//    cvtColor(g_SrcImage1, g_SrcImage1, COLOR_BGR2GRAY);
-//    cvtColor(g_SrcImage2, g_SrcImage2, COLOR_BGR2GRAY);
-    
-    // croppe image
-//    croppedImage = g_SrcImage2(Rect_<float>(0, 0, 290, 290));
-//    imgROI = g_SrcImage1(Rect_<float>(10, 10, g_SrcImage2.cols - 10, g_SrcImage2.rows - 10));
+    [self fromThreeOrFour];
+    self.slider.value = 0.0;
+
+}
+
+- (void)fromThreeOrFour {
+    if (self.threeOfFour == Three) {
+        self.srcImage1 = [UIImage imageNamed:@"keyhole"];
+        self.srcImage2 = [UIImage imageNamed:@"wordpress"];
+        self.imageView.image = self.srcImage2;
+        self.tools = [[OpenCVUtilities alloc] init];
+        g_SrcImage1 = [self.tools cvMatFromUIImage:self.srcImage1];
+        g_SrcImage2 = [self.tools cvMatFromUIImage:self.srcImage2];
+        //    cvtColor(g_SrcImage1, g_SrcImage1, COLOR_BGR2GRAY);
+        //    cvtColor(g_SrcImage2, g_SrcImage2, COLOR_BGR2GRAY);
+        
+        // croppe image
+        //    croppedImage = g_SrcImage2(Rect_<float>(0, 0, 290, 290));
+        //    imgROI = g_SrcImage1(Rect_<float>(10, 10, g_SrcImage2.cols - 10, g_SrcImage2.rows - 10));
+    }else {
+        self.slider.hidden = YES;
+    }
 }
 
 - (IBAction)sliderValuechanged:(UISlider *)sender {

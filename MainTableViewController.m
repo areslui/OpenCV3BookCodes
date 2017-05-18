@@ -8,6 +8,7 @@
 
 #import "MainTableViewController.h"
 #import "Chapter1VC.h"
+#import "Chapter3VC.h"
 
 @interface MainTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -65,7 +66,7 @@
             [self performSegueWithIdentifier:@"chapter3" sender:[NSNumber numberWithInteger:self.chapter]];
             break;
         case Chapter4:
-            [self performSegueWithIdentifier:@"" sender:Chapter1];
+            [self performSegueWithIdentifier:@"chapter3" sender:[NSNumber numberWithInteger:self.chapter]];
             break;
         case Chapter5:
             [self performSegueWithIdentifier:@"" sender:Chapter1];
@@ -104,6 +105,14 @@
 //        default:
 //            break;
 //    }
+    if ([segue.identifier isEqualToString:@"chapter3"]) {
+        Chapter3VC *vc = (Chapter3VC *)segue.destinationViewController;
+        if (self.chapter == Chapter3) {
+            vc.threeOfFour = Three;
+        }else {
+            vc.threeOfFour = Four;
+        }
+    }
 }
 
 

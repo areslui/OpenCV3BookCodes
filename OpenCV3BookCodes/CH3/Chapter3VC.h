@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, ThreeOrFour) {
+    Three,
+    Four
+};
+
 @interface Chapter3VC : UIViewController
+
+@property (nonatomic) ThreeOrFour threeOfFour;
 
 @end

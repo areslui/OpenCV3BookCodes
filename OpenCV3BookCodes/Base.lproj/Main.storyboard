@@ -70,6 +70,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="3FK-95-NC8" id="2GK-Kg-hCp"/>
+                        <outlet property="slider" destination="8pe-e1-JGp" id="svv-hb-Ru6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxc-j9-R4s" userLabel="First Responder" sceneMemberID="firstResponder"/>

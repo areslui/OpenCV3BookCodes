@@ -7,6 +7,8 @@
 //
 
 #include <opencv2/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 #import <UIKit/UIKit.h>
 #import "OpenCVUtilities.h"
 
@@ -15,7 +17,40 @@ using namespace std;
 
 @implementation OpenCVUtilities
 
+#pragma mark - Darwing Methods
 
+- (void)drawEllipse:(Mat)image angle:(double)angle imageFrameWidth:(float)imageFrameWidth {
+    int thickness = 2;
+    int lineType = 8;
+    
+    ellipse(image,
+            Point_<float>(imageFrameWidth / 2, imageFrameWidth / 2),
+            Size_<float>(imageFrameWidth / 4, imageFrameWidth / 16),
+            angle,
+            0,
+            360,
+            Scalar(255, 129, 0),
+            thickness,
+            lineType);
+}
+
+- (void)drawFilledCircle:(Mat)image center:(Point_<float>)center imageFrameWidth:(float)imageFrameWidth {
+    int thickness = -1;
+    int lineType = 8;
+    
+    circle(image,
+           center,
+           imageFrameWidth / 32,
+           Scalar(0, 0, 255),
+           thickness,
+           lineType);
+}
+
+- (void)drawPolygon:(Mat)image imageFrameWidth:(float)imageFrameWidth {
+    int lineType = 8;
+    
+    Point_<float> rookPoints[1][20];
+}
 
 #pragma mark - Image Convert
 
